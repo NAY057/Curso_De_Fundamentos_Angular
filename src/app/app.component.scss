@@ -1,0 +1,62 @@
+.box{
+    height: 300px;
+    width: 300px;
+    overflow: auto;
+    background: red;
+}
+
+.error-line{
+    border-color: blue;
+    transition: 0.5s;
+    border: 5px solid;
+    height: 0;
+    &.invalid{
+        border-color: red;
+    }
+    &.valid{
+        border-color: green;
+    }
+}
+
+.error_msg{
+    background-color: red;
+    color: white;
+    opacity: 0;
+    transform: 0.5s;
+    &.active{
+        opacity: 1;
+    }
+}
+
+.products--grid {
+    display: flex;
+    flex-direction: column;
+    div {
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      h2, p {
+        margin: 0;
+      }
+    }
+
+  }
+
+  @media screen and (min-width: 40em) {
+    .products--grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 15px;
+    }
+  }
+  
+//   @media screen and (min-width: 1024px) {
+//     .products--grid {
+//       display: grid;
+//       grid-template-columns: repeat(5, 1fr);
+//       grid-gap: 15px;
+//     }
+//   }
+  
+  
